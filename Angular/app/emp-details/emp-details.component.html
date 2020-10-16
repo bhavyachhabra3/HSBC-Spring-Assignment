@@ -1,0 +1,30 @@
+<div *ngIf="tcheck">
+<table border="2">
+  <tr>
+    <th>empnum</th>
+    <th>empname</th>
+    <th>salary</th>
+    <th>designation</th>
+    <th>bonus</th>
+    <th>total</th>
+  </tr>
+  <tr *ngFor="let names of empdetails">
+    <td>{{names.num}}</td>
+    <td>{{names.name}}</td>
+    <td>{{names.salary}}</td>
+    <td>{{names.desg}}</td>
+    <td>{{0.1*names.salary}}</td>
+    <td>{{1.1*names.salary}}</td>
+  </tr>
+</table>
+</div>
+<div *ngIf="lcheck">
+  <li *ngFor="let names of empdetails">
+    <ul>
+      {{names.num}}-->{{names.name}}-->{{names.salary}}-->{{names.desg}}-->{{0.1*names.salary}}-->{{1.1*names.salary}}
+    </ul>
+  </li>
+</div>
+<input type="button" value="table display" (click)="tabledisp()">
+<input type="button" value="list display" (click)="listdisp()" >
+<input type="button" value="clear" (click)="clearform()" >
