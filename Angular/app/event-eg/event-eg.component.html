@@ -1,0 +1,11 @@
+<!--Name: <input type="text" ><br>
+Email: <input type="text" (focus)="f1()"><br>
+<input type="radio" name="r1">Male<br>
+<input type="radio" name="r1">Female<br>
+<input type="button" (click)="myHandler()" value="Click me!">
+--><!--either use (click) or use on-click  both work the same-->
+<!--
+<div (click)="myHandler($event)" (mouseover)="myHandler($event)">mydiv</div>
+-->
+Name: <input type="text" #myname><br>
+<input type="button" on-click="myHandler(myname.value)" value="Greet User">
